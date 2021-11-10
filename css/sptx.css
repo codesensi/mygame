@@ -9,11 +9,11 @@
   border-radius: 6px;
   background: #fff;
   padding: 10px;
-  min-width: 150px;
-  margin: 22px 0 0 3%;
+  min-width: 160px;
   float: left;
   overflow: hidden;
   transition: all .3s;
+  margin: 22px 0 15px 3%;
 }
 .main .box .item:hover {
   transform: translateY(-5px);
