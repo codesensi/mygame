@@ -1,5 +1,5 @@
 ﻿
- 
+
 /* ANIMATION */
 /* SHADOWS */
 /* Shadows (from mdl http://www.getmdl.io/) */
@@ -3351,7 +3351,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 
 .navbar-absolute {
   position: absolute;
-  width: 100%;
+  /*width: 100%;*/
   padding-top: 10px;
   z-index: 1029;
 }
@@ -4682,7 +4682,7 @@ footer .btn {
   }
 
   .main-panel {
-    width: 100%;
+    width: 80%;
   }
 
   .navbar-transparent {
