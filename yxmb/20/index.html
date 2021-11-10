@@ -122,7 +122,7 @@ a:hover {
 	<div class="game-wrap">
 		<canvas width="960px" height="540" id="game"></canvas>
 		<article class="content">
-			<h1 class="title"><span>星</span><span>益</span><span>小</span><span>游</span><span>戏</span><span></span><span>平</span><span>台</span> <span>欢</span><span>迎</span><span>你</span></h1>
+			<h1 class="title"><span>龙</span><span>猫</span><span>小</span><span>游</span><span>戏</span><span></span><span>平</span><span>台</span></h1>
 
 			<p>小键盘【左】 和 【右】或 【A】 和 【D】 键移动***【空格键】发射子弹</p>
 		</article>
@@ -257,7 +257,7 @@ var Game = {
   	this.ctx.fillStyle = Game.color;
   	this.ctx.fillRect(0, 0, this.c.width, this.c.height);
   },
-   
+
   pause: function(){
 		this.paused = true;
   },
@@ -288,7 +288,7 @@ var Game = {
   	this.ctx.fillText("Score: " + this.score, 8, 20);
   	this.ctx.fillText("Lives: " + (this.maxLives - this.life), 8, 40);
   },
-  
+
 	loop: function(){
 		if(!Game.paused){
 			Game.clear();
@@ -347,7 +347,7 @@ var Player = function(){
 
 Player.prototype.die = function(){
 	if(Game.life < Game.maxLives){
-		Game.invincibleMode(2000);  
+		Game.invincibleMode(2000);
  		Game.life++;
 	} else {
 		Game.pause();
@@ -392,7 +392,7 @@ Player.prototype.shoot = function(){
 
 
 
-var Bullet = function(x){  
+var Bullet = function(x){
 	this.width = 8;
 	this.height = 20;
 	this.x = x;
@@ -401,7 +401,7 @@ var Bullet = function(x){
 	this.index = Game.bulletIndex;
 	this.active = true;
 	this.color = "white";
-	
+
 };
 
 
@@ -436,7 +436,7 @@ var Enemy = function(){
 	this.shootingSpeed = Game.random(30, 80);
 	this.movingLeft = Math.random() < 0.5 ? true : false;
 	this.color = "hsl("+ Game.random(0, 360) +", 60%, 50%)";
-	
+
 };
 
 
@@ -462,14 +462,14 @@ Enemy.prototype.update = function(){
 			this.movingLeft = true;
 		}
 	}
-	
+
 	for(var i in Game.bullets){
 		var currentBullet = Game.bullets[i];
 		if(Game.collision(currentBullet, this)){
 			this.die();
 			delete Game.bullets[i];
 		}
-	} 
+	}
 };
 
 Enemy.prototype.die = function(){
@@ -483,7 +483,7 @@ Enemy.prototype.die = function(){
   		new Enemy();
 	  }, 2000);
 	}
-  
+
 };
 
 Enemy.prototype.explode = function(){
